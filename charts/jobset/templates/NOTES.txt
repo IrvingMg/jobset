@@ -17,4 +17,4 @@ limitations under the License.
 Thank you for installing {{ .Chart.Name }}. The JobSet controller is now deployed in your cluster. To verify that the controller is running, you can run:
   kubectl get deployment -n {{ .Release.Namespace }} {{ include "jobset.controller.deployment.name" . }}
 To access the metrics endpoint:
-  kubectl port-forward svc/{{ include "jobset.metrics.service.name" . }} 8443
+  kubectl port-forward svc/{{ include "jobset.fullname" . }}-controller-manager-metrics-service 8443

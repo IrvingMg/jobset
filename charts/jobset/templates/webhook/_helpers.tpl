@@ -43,16 +43,3 @@ Create the name of the jobset webhook service.
 {{ include "jobset.webhook.name" . }}-service
 {{- end -}}
 
-{{/*
-Create the name of the jobset mutating webhook configuration.
-*/}}
-{{- define "jobset.webhook.mutatingWebhookConfiguration.name" -}}
-jobset-mutating-webhook-configuration
-{{- end -}}
-
-{{/*
-Create the name of the jobset validating webhook configuration.
-*/}}
-{{- define "jobset.webhook.validatingWebhookConfiguration.name" -}}
-jobset-validating-webhook-configuration
-{{- end -}}

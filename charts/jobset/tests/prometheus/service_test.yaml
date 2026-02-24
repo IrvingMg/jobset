@@ -17,7 +17,7 @@
 suite: Test Prometheus Service
 
 templates:
-  - prometheus/service.yaml
+  - prometheus/manager_metrics_service.yaml
 
 release:
   name: jobset
@@ -32,4 +32,4 @@ tests:
       - containsDocument:
           apiVersion: v1
           kind: Service
-          name: jobset-metrics-service
+          name: jobset-controller-manager-metrics-service

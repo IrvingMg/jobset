@@ -17,7 +17,7 @@
 suite: Test cert-manager Issuer
 
 templates:
-  - certmanager/issuer.yaml
+  - certmanager/certificate.yaml
 
 release:
   name: jobset
@@ -32,4 +32,5 @@ tests:
       - containsDocument:
           apiVersion: cert-manager.io/v1
           kind: Issuer
-          name: jobset-self-signed-issuer
+          name: jobset-selfsigned-issuer
+          any: true

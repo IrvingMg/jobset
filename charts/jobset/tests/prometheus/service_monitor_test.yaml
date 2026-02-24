@@ -17,7 +17,7 @@
 suite: Test Prometheus ServiceMonitor
 
 templates:
-  - prometheus/service_monitor.yaml
+  - prometheus/monitor.yaml
 
 release:
   name: jobset
@@ -40,7 +40,7 @@ tests:
       - containsDocument:
           apiVersion: monitoring.coreos.com/v1
           kind: ServiceMonitor
-          name: jobset-metrics-service-monitor
+          name: jobset-controller-manager-metrics-monitor
 
   - it: Should fail if the cluster does not support the required API resource `monitoring.coreos.com/v1/ServiceMonitor`
     set:
